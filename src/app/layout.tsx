@@ -2,6 +2,13 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
+// USE REACT ICONS
+// USE ZOD + REACT HOOK FORM
+// USE NEXT 
+
+// Import Modules
+import { Chakra } from '@/providers/chakra'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -16,7 +23,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Chakra>
+          {children}
+        </Chakra>
+      </body>
     </html>
   )
 }
