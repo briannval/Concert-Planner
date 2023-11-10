@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
 
 // USE REACT ICONS
 // USE ZOD + REACT HOOK FORM
@@ -8,6 +7,9 @@ import './globals.css'
 
 // Import Modules
 import { Chakra } from '@/providers/chakra'
+
+// Import Components
+import Nav from '@/components/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Chakra>
+          <Nav />
           {children}
         </Chakra>
       </body>

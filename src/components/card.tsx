@@ -13,7 +13,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 
-export default function SocialProfileWithImage() {
+export default function CardItem() {
   return (
     <Center py={6}>
       <Box
@@ -47,22 +47,22 @@ export default function SocialProfileWithImage() {
         <Box p={6}>
           <Stack spacing={0} align={'center'} mb={5}>
             <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-              John Doe
+              Taylor Swift
             </Heading>
-            <Text color={'gray.500'}>Frontend Developer</Text>
+            <Text color={'gray.500'}>Rogers Arena</Text>
           </Stack>
 
           <Stack direction={'row'} justify={'center'} spacing={6}>
             <Stack spacing={0} align={'center'}>
-              <Text fontWeight={600}>23k</Text>
+              <Text fontWeight={600}>21-12</Text>
               <Text fontSize={'sm'} color={'gray.500'}>
-                Followers
+                Date
               </Text>
             </Stack>
             <Stack spacing={0} align={'center'}>
-              <Text fontWeight={600}>23k</Text>
+              <Text fontWeight={600}>19:00</Text>
               <Text fontSize={'sm'} color={'gray.500'}>
-                Followers
+                Time
               </Text>
             </Stack>
           </Stack>
@@ -77,7 +77,19 @@ export default function SocialProfileWithImage() {
               transform: 'translateY(-2px)',
               boxShadow: 'lg',
             }}>
-            Follow
+            Update
+          </Button>
+          <Button
+            w={'full'}
+            mt={2}
+            bg={useColorModeValue('#151f21', 'gray.900')}
+            color={'white'}
+            rounded={'md'}
+            _hover={{
+              transform: 'translateY(-2px)',
+              boxShadow: 'lg',
+            }}>
+            Delete
           </Button>
         </Box>
       </Box>
