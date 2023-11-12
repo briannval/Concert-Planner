@@ -12,3 +12,5 @@ const connectMongoose = () => {
         logger.error(error)
     }
 }
+
+export default connectMongoose
