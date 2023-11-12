@@ -43,7 +43,7 @@ const { colorMode, toggleColorMode } = useColorMode()
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Concertify</Box>
+            <Box>Concertify </Box>
           </HStack>
           <Flex alignItems={'center'}>
             <Button
