@@ -13,7 +13,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 
-export default function CardItem() {
+export const CardItem = () => {
   return (
     <Center py={6}>
       <Box

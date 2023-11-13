@@ -27,7 +27,7 @@ interface Props {
 
 
 
-export default function WithAction() {
+export const NavbarItem = () => {
 const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onOpen, onClose } = useDisclosure()
 

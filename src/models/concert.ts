@@ -1,10 +1,19 @@
-import { Schema , model } from "mongoose"
+import mongoose , { Schema , model } from "mongoose"
 
 // Concert Interface
-import { Concert } from "@/interfaces/interface"
+interface Concert {
+    artist: string;
+    location: string;
+    hour: number;
+    minute: number;
+    month: number;
+    day: number;
+    avatar?: string;
+    background?: string;
+}
 
 // Concert Schema
-const concertSchema = new Schema<Concert>({
+export const ConcertModel = new Schema<Concert>({
     artist: { type: String, required: true},
     location: { type: String, required: true},
     hour: { type: Number, required: true},
@@ -16,6 +25,9 @@ const concertSchema = new Schema<Concert>({
 
 })
 
+// Promise
+mongoose.Promise = global.Promise
 
 // Concert Model
+export const Concert = mongoose.models.Concert || mongoose.model<Concert>('Concert',ConcertModel)
 
